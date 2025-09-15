@@ -1,50 +1,24 @@
 # Machine-Learning-Competicion-Pump-it-Up
-Predicción del estado de bombas de agua 🚰
+🚰 Water Pump Status Prediction
 
-Este proyecto aplica técnicas de Machine Learning para predecir el estado de funcionamiento de bombas de agua en Tanzania. El objetivo es clasificar cada bomba como:
+Este proyecto aplica Machine Learning para predecir el estado de las bombas de agua en Tanzania a partir de datos públicos. Forma parte de la competición Pump it Up: Data Mining the Water Table (DrivenData).
 
-Funcionando
+🎯 Objetivo
 
-Funcionando pero necesita reparación
+Clasificar cada bomba en una de tres categorías:
 
-Estropeada
+🔧 Lo que hice
 
-Contenido del repositorio
+- Exploración de datos y análisis descriptivo.
 
-notebooks/ → desarrollo del EDA, feature engineering y entrenamiento.
+-  Limpieza e imputación de valores faltantes.
 
-transformar_x_test.py → función espejo para transformar el test con los mismos artefactos que en train.
+-  Normalización de texto y agrupación de categorías raras.
 
-artefactos/ → medianas, top categorías, label encoders, modelos serializados con joblib.
+-  Codificación (LabelEncoder y One-Hot).
 
-submission.csv → predicciones finales para Kaggle.
+-  Creación de nuevas variables (log, binarias, años activos, clustering geográfico con KMeans).
 
-Metodología
+-  Entrenamiento y comparación de modelos (RandomForest, Gradient Boosting).
 
-EDA (Exploratory Data Analysis) → análisis descriptivo de variables, detección de nulos, outliers y patrones.
-
-Feature Engineering
-
-Imputación de variables numéricas con medianas por región y globales.
-
-Creación de variables binarias y log-transformaciones.
-
-Agrupación de categorías poco frecuentes.
-
-Codificación LabelEncoder y One-Hot.
-
-Clustering geográfico con KMeans (15 clusters).
-
-Modelado
-
-Modelos base: RandomForest, Gradient Boosting.
-
-Ajuste de hiperparámetros.
-
-Evaluación con precisión, recall y F1-score.
-
-Predicción y envío
-
-Transformación del test con los mismos artefactos.
-
-Generación del archivo de submission
+Resultados: Mejor score de 0.8119
